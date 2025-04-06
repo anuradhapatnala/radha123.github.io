@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anuradha Patnala - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #20232a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #61dafb;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #21a1f1;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #20232a;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Anuradha Patnala</h1>
+    <nav>
+      <a href="#resume">Resume</a>
+      <a href="#github">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="resume">
+      <h2>Professional Summary</h2>
+      <p>Assistant Professor in CSE at Centurion University, with 12+ years experience in teaching at Aditya Engineering College. Skilled in programming, web development, and curriculum coordination.</p>
+
+      <h2>Technical Skills</h2>
+      <p><strong>Languages:</strong> C, C++, Java, Python</p>
+      <p><strong>Web Tech:</strong> HTML</p>
+      <p><strong>Databases:</strong> ORACLE, MySQL</p>
+
+      <h2>Education</h2>
+      <ul>
+        <li>M.Tech in Software Engineering, 78.86%, KIET for Women, 2016</li>
+        <li>MCA, 77.77%, KIET, 2010</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>MCA:</strong> Voters Registration Monitoring System</li>
+        <li><strong>M.Tech:</strong> Data Security in Wireless Sensor Networks</li>
+      </ul>
+
+      <h2>Publications</h2>
+      <ul>
+        <li>Efficiently Prevent Real Time Packet Classification – IJCSIET</li>
+        <li>Preventing Data Transmission in Cluster-Based WSNs – IJSETR</li>
+        <li>Face Recognition using DRL – JICS, 2023</li>
+        <li>DSS for Unstructured DB Analysis – MSJ, 2023</li>
+      </ul>
+    </section>
+
+    <section id="github">
+      <h2>GitHub Portfolio</h2>
+      <p>Explore my projects and code contributions on GitHub:</p>
+      <p>🔗 <a href="https://github.com/radha123.github.io" target="_blank">github.com/radha123.github.io</a></p>
+
+      <h3>Featured Projects</h3>
+      <ul>
+        <li><a href="https://github.com/yourusername/project1" target="_blank">Project One</a> – Web Application</li>
+        <li><a href="https://github.com/yourusername/project2" target="_blank">Project Two</a> – ML Model</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Anuradha Patnala. All rights reserved.
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+</html>
